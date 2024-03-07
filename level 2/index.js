@@ -110,28 +110,106 @@
 
 // Дан массив. Удалите из него элементы с заданным значением.
 
+// let arr = [
+//     'name',
+//     'age',
+//     'elem'
+// ]
+
+// let deleteElem = 'name';
+
+
+
+
+// function getNewArray(arr, deleteElem){
+
+//     let newArr = [];
+
+//     for(element of arr){
+
+//         if(element === deleteElem){
+//             continue;
+
+//         }else{
+//             newArr.push(element);
+//         }
+        
+//     }
+
+//     return newArr;
+
+// }
+
+// let result = getNewArray(arr, deleteElem);
+
+// console.log(result);
+
 //33
 
 // Дан некоторый массив, например, вот такой:
-// [1, 2, 3, 4, 5, 6]
+// let arr = [1, 2, 3, 4, 5, 6]
 
 // Найдите сумму первой половины элементов этого массива. 
 
-//34
+// let res = arr.slice(0, Math.floor(arr.length/2));
 
-// Дан массив с числами. Подсчитайте количество отрицательных чисел в этом массиве.
+// console.log(res.reduce((acc, elem)=>acc+elem, 0));
+
+//34
+// Дан массив с числами. Подсчитайте количество 
+// отрицательных чисел в этом массиве.
+
+// let arr = [
+//     12, 12, -21, -65, -87, -78
+// ]
+
+
+
+// let new1 = arr.filter((elem)=>{ 
+    
+
+//         return elem < 0;
+
+// });
+
+// console.log(new1.length);
 
 //35
 
 // Дан массив с числами. Оставьте в нем только положительные числа.
 
+// let arr = [
+//     12, 12, -21, -65, -87, -78
+// ]
+
+// let new1 = arr.filter((elem)=> elem > 0 );
+
+// console.log(new1);
+
 //36
 
 // Дана строка. Удалите предпоследний символ из этой строки.
 
+// let str = 'Привет46';
+
+// let arr = str.split('');
+
+// console.log(arr.splice(-2, 1));
+// console.log(arr.join(''));
+
 //37
 
 // Дан некоторый массив, например, вот такой:
-// [1, 2, 3, 4, 5, 6]
+// let arr = [1, 2, 3, 4, 5, 6]
 
-// Поделите сумму первой половины элементов этого массива на сумму второй половины элементов. 
+// Поделите сумму первой половины элементов этого 
+// массива на сумму второй половины элементов.
+
+// let leftArr = arr.slice(0, Math.floor(arr.length/2));
+// let rightArr = arr.slice(-Math.floor(arr.length/2));
+
+// let sum1 = leftArr.reduce((acc, elem)=>acc+elem, 0);
+
+// let sum2 = rightArr.reduce((acc, elem)=>acc+elem, 0);
+
+// console.log(sum1/sum2);
